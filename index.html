@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#08090d">
+  <title>Street Rush 3D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="hud">
+  <div class="top">
+    <div class="card"><span>СКОРОСТЬ</span><b id="speed">0</b><small>KM/H</small></div>
+    <div class="card"><span>ВРЕМЯ</span><b id="time">0.0</b><small>SEC</small></div>
+    <button id="hideUI" class="icon" aria-label="Скрыть интерфейс">◐</button>
+  </div>
+
+  <div id="menu" class="panel">
+    <h1>STREET RUSH</h1>
+    <p>Ночная аркадная гонка. Доедь до финиша быстрее, не врезаясь в трафик.</p>
+    <button id="start" class="main-btn">СТАРТ</button>
+    <div class="help">ПК: W/S + A/D · SPACE — ручник</div>
+    <div class="help mobile-help">Телефон: экранные кнопки</div>
+  </div>
+
+  <div id="finish" class="panel hidden">
+    <h2>ФИНИШ!</h2>
+    <p>Твоё время: <b id="result">0.0</b> сек.</p>
+    <button id="again" class="main-btn">ЕЩЁ РАЗ</button>
+  </div>
+
+  <div id="controls">
+    <div class="steer">
+      <button data-key="left">◀</button>
+      <button data-key="right">▶</button>
+    </div>
+    <div class="pedals">
+      <button data-key="brake">▼</button>
+      <button data-key="gas">▲</button>
+    </div>
+  </div>
+</div>
+
+<button id="restore" aria-label="Показать интерфейс"></button>
+<script type="module" src="game.js"></script>
+</body>
+</html>
