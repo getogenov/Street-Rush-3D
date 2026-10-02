@@ -1,0 +1,62 @@
+*{box-sizing:border-box;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-user-drag:none}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#08090d;color:#fff;font-family:Arial,Helvetica,sans-serif;touch-action:none;overscroll-behavior:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}#rotatePrompt{display:none;position:fixed;inset:0;z-index:1000;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:24px;background:#08090d;color:#fff}#rotatePrompt .rotate-icon{font-size:64px;line-height:1;margin-bottom:18px;animation:rotateHint 1.6s ease-in-out infinite}#rotatePrompt h2{margin:0 0 8px;letter-spacing:3px}#rotatePrompt p{margin:0;opacity:.6}@keyframes rotateHint{0%,100%{transform:rotate(0deg)}50%{transform:rotate(90deg)}}#game{position:fixed;inset:0;width:100%;height:100%;display:block}#hud{position:fixed;inset:0;transition:opacity .25s;pointer-events:none}.top{position:absolute;left:16px;right:16px;top:max(14px,env(safe-area-inset-top));display:flex;gap:10px;align-items:center}.card{min-width:100px;padding:8px 12px;border-radius:12px;background:rgba(7,10,18,.65);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(10px)}.card span,.card small{display:block;font-size:9px;opacity:.55;letter-spacing:1px}.card b{font-size:20px}.coin-card{min-width:auto;font-size:18px;display:flex;align-items:center;gap:5px}.coin-card b{font-size:18px}.icon{pointer-events:auto;width:44px;height:44px;border:1px solid rgba(255,255,255,.2);border-radius:12px;background:rgba(7,10,18,.7);color:#fff;font-size:19px}.top .icon:first-of-type{margin-left:auto}.panel{pointer-events:auto;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(470px,calc(100% - 30px));max-height:90vh;overflow:auto;padding:30px 24px;text-align:center;border-radius:22px;background:rgba(7,10,18,.82);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(14px);box-shadow:0 25px 90px #0008}.panel h1,.panel h2{margin:0 0 12px;letter-spacing:5px}.panel p{line-height:1.5;opacity:.8}.main-btn,.secondary-btn{margin-top:10px;padding:13px 24px;border:0;border-radius:12px;font-weight:800;font-size:14px}.main-btn{background:#fff;color:#08090d}.secondary-btn{background:#ffffff16;color:#fff;border:1px solid #ffffff22}.help{margin-top:14px;font-size:11px;opacity:.45}.hidden{display:none!important}.mobile-help{display:none}.menu-actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+#controls{position:absolute;inset:auto 0 max(20px,env(safe-area-inset-bottom)) 0;display:none;justify-content:space-between;padding:0 22px;align-items:end;z-index:20}.steer,.pedals{display:flex;gap:10px}.steer button,.pedals button,.pause-btn{pointer-events:auto;touch-action:none;-webkit-tap-highlight-color:transparent;width:72px;height:64px;border:1px solid #ffffff30;border-radius:18px;background:#080a12cc;color:white;font-size:25px;backdrop-filter:blur(8px);box-shadow:0 5px 20px #0006}.steer button.pressed,.pedals button.pressed{background:#ffffff30;transform:scale(.96)}.pedals button:last-child{background:#ffffff20}.pause-btn{font-size:20px;margin-left:10px;width:58px;height:58px}.ui-hidden #hud{opacity:0;pointer-events:none}.ui-hidden #restore{display:block}.ui-hidden #controls{display:none}#restore{display:none;position:fixed;z-index:50;left:8px;top:8px;width:44px;height:44px;border:1px solid #ffffff22;border-radius:12px;background:#080a12aa;color:white}.shop-panel{width:min(620px,calc(100% - 24px))}#skins{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:15px 0;text-align:left}.skin{padding:12px;border:1px solid #ffffff18;border-radius:14px;background:#ffffff08;overflow:hidden}.skin.selected{border-color:#fff}.skin-preview{height:82px;border-radius:10px;margin-bottom:8px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#121722,#252c3a)}.mini-car{--car:#fff;position:relative;width:86px;height:35px;background:var(--car);border-radius:12px 18px 7px 7px;box-shadow:0 0 22px color-mix(in srgb,var(--car),transparent 50%);transform:skewX(-5deg)}.mini-car:before{content:"";position:absolute;width:42px;height:19px;left:22px;top:-10px;border-radius:12px 15px 3px 3px;background:#172131;border:2px solid color-mix(in srgb,var(--car),#000 15%)}.mini-car:after{content:"";position:absolute;left:6px;right:6px;bottom:-6px;height:10px;background:radial-gradient(circle at 12% 50%,#090a0d 0 6px,transparent 7px),radial-gradient(circle at 88% 50%,#090a0d 0 6px,transparent 7px)}.skin.veryrare .mini-car,.skin.epic .mini-car{border-radius:10px 24px 5px 5px}.skin.mythic .mini-car,.skin.legendary .mini-car{height:31px;clip-path:polygon(0 35%,15% 25%,30% 8%,70% 8%,86% 25%,100% 35%,96% 100%,4% 100%)}.skin.legendary .mini-car{box-shadow:0 0 30px #ffd21f99}.skin-name{font-weight:800}.rarity{font-size:10px;text-transform:uppercase;opacity:.7;margin-top:2px}.speed-bonus{font-size:12px;font-weight:800;margin:7px 0}.price{font-size:12px;opacity:.8;margin:6px 0}.skin button{width:100%;padding:8px;border:0;border-radius:9px;background:#fff;color:#111;font-weight:700}.skin button:disabled{opacity:.4}
+@media (pointer: coarse) and (orientation: landscape){#controls{display:flex}.mobile-help{display:block}.top{left:12px;right:12px}.card{min-width:82px;padding:7px 10px}.card b{font-size:17px}.panel{max-height:88vh}.shop-panel{max-width:760px}#skins{grid-template-columns:repeat(3,minmax(0,1fr));max-height:55vh;overflow:auto}.steer,.pedals{gap:9px}.steer button,.pedals button{width:68px;height:58px}.pause-btn{width:54px;height:54px}.skin-preview{height:72px}}
+@media (pointer: coarse) and (orientation: portrait){#rotatePrompt{display:flex}#hud,#restore{display:none!important}}
+@media (max-width:700px) and (orientation: portrait){#controls{display:none}}
+@media (max-width:430px) and (orientation: landscape){#controls{padding:0 10px;gap:8px}.steer,.pedals{gap:7px}.steer button,.pedals button{width:60px;height:54px}.pause-btn{width:50px;height:50px}.top .card:nth-child(2){display:none}.skin-preview{height:64px}}
+@media (min-width:701px) and (pointer: fine){#controls{display:none}}
+
+/* Mobile racing layout: steering on the left, pedals grouped in the lower-right, pause in the top-right. */
+@media (pointer: coarse) and (orientation: landscape){
+  #controls{
+    position:fixed;
+    inset:auto 0 max(16px,env(safe-area-inset-bottom)) 0;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    padding:0 max(18px,env(safe-area-inset-right)) 0 max(18px,env(safe-area-inset-left));
+    z-index:40;
+    pointer-events:none;
+  }
+  #controls .steer,
+  #controls .pedals{display:flex;gap:14px;pointer-events:auto}
+  #controls .steer button,
+  #controls .pedals button{
+    width:94px;height:82px;
+    border-radius:22px;
+    font-size:34px;
+    touch-action:none;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    user-select:none;
+  }
+  #controls .pedals{margin-left:auto;}
+  #controls .pedals button{width:108px;height:92px}
+  #controls .pedals button[data-key="gas"]{order:2;background:rgba(255,255,255,.18)}
+  #controls .pedals button[data-key="brake"]{order:1}
+  #mobilePause{
+    position:fixed;
+    top:max(14px,env(safe-area-inset-top));
+    right:max(14px,env(safe-area-inset-right));
+    width:64px;height:64px;
+    margin:0;
+    border-radius:18px;
+    font-size:24px;
+    z-index:60;
+  }
+  /* Don't show driving controls over menus/pause/shop/finish. */
+  #menu:not(.hidden) ~ #controls,
+  #pause:not(.hidden) ~ #controls,
+  #finish:not(.hidden) ~ #controls,
+  #shop:not(.hidden) ~ #controls{display:none}
+
+  /* Keep the other HUD buttons out of the pause corner. */
+  #hud .top .icon{position:fixed;top:max(14px,env(safe-area-inset-top));z-index:55}
+  #hud .top #hideUI{right:max(88px,calc(64px + env(safe-area-inset-right) + 24px))}
+  #hud .top #fullscreen{right:max(158px,calc(128px + env(safe-area-inset-right) + 30px))}
+}
+
+@media (pointer: coarse) and (orientation: landscape) and (max-width:700px){
+  #controls .steer button{width:88px;height:78px}
+  #controls .pedals button{width:102px;height:88px}
+}
